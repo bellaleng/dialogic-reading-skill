@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Reading notes produced by the skill (personal — don't commit)
+reading-notes/
+
+# Editor cruft
+.vscode/
+.idea/
+*.swp
