@@ -17,6 +17,7 @@ It's built for reading that changes how you think — not for having a book summ
 - 🗺️ **A plan that fits you** — built around your deadline, daily minutes, and *why* you're reading: knowledge, writing, research, reflection, or an exam.
 - 📖 **One chunk at a time** — each session gives you location + vocabulary + focuses + a **single** question. Short enough to do on your phone.
 - 🧠 **Questions that make you think** — application, falsification, and decision prompts pull the book into your own life and work, so what you read actually sticks.
+- 💬 **Feedback that engages your answer** — every reply gets checked against the text: what you got right, what the passage adds, and one push deeper. Misreadings get corrected with the actual line, not waved through.
 - ✍️ **Your words, kept verbatim** — answers saved exactly as you wrote them, with interpretation added below, ready to become essays, threads, or posts.
 - 🔁 **Stage reviews** — per-day summaries: what the book says, what it changed in your thinking, and the reusable writing material you surfaced.
 - 📂 **Plain Markdown you own** — works with Obsidian, a plain folder, or a git repo. Nothing leaves your machine.
@@ -69,7 +70,7 @@ A 3-day read of *The Book of Elon*, for writing material, ~30 min/day. This show
 > **Focus:** (1) how he redefines what leadership actually *gives* you; (2) the rule "spend time only on things that are going wrong — the ones others can't fix."
 > **One question:** Where in your own work do you spend time on things that are already *going right*, instead of the hard thing only you can do?
 
-*(You answer in your own words. Claude saves your answer verbatim, adds a short reflection below it in `daily-records/Day 2 record.md`, then advances `reading-progress.md` to the next chunk.)*
+*(You answer in your own words. Claude first responds to your answer — names what's strong in it, checks it against the passage, pushes one step deeper — then saves it verbatim with a short reflection in `daily-records/Day 2 record.md` and advances `reading-progress.md` to the next chunk.)*
 
 **You:** that's it for today
 
@@ -89,8 +90,9 @@ dialogic-reading/
 │   └── init_reading.py          # scaffolds a book's notes folder (deterministic, no overwrite)
 ├── templates/                   # reading-plan / progress / entrance / day-record / stage-summary
 └── references/
-    ├── planning-patterns.md     # how to size & pace a plan by purpose
-    └── question-playbook.md     # the five question types and when to use each
+    ├── planning-patterns.md     # decomposition procedure: book → days → chunks, with re-planning rules
+    ├── question-playbook.md     # the five question types and when to use each
+    └── feedback-playbook.md     # the four feedback moves after every answer, calibrated to answer quality
 ```
 
 Progressive disclosure keeps it light: Claude sees only the name + description until the skill triggers, loads `SKILL.md` when it does, and reads a reference file only when it needs it.

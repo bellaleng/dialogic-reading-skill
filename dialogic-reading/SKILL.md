@@ -37,7 +37,7 @@ This creates `<notes-dir>/<slug>/` with an entrance note, `reading-plan.md`, `re
 Identify the source file and format (PDF, EPUB, Markdown, TXT, web). Convert to clean reading Markdown if helpful, but never paraphrase or silently alter the original — only fix extraction artifacts (broken line-wraps, headers/footers, split words). Run the scaffolder (above), then save/link the source under `source/`. If extraction quality is poor, flag it rather than hiding it.
 
 ### 2. Design the reading plan
-Ask or infer deadline, daily time, preferred language, reading speed, and **purpose** (knowledge, writing material, research thinking, self-reflection, exam, work). Fill `templates/reading-plan.md`. For how to size and pace a plan by purpose — and how to be honest when the target is aggressive — read `references/planning-patterns.md`.
+Ask or infer deadline, daily time, preferred language, reading speed, and **purpose** (knowledge, writing material, research thinking, self-reflection, exam, work). Then run the **decomposition procedure** in `references/planning-patterns.md` — map the structure, measure the load, compute days, assign sections to days, define answer-based "done" per day, pre-cut the near days into chunks — and write every result into `templates/reading-plan.md`. If the deadline doesn't fit the math, resolve the tradeoff with the reader before writing the schedule.
 
 ### 3. Run a reading session
 When the reader says "read today", "start reading", "continue", or "next":
@@ -48,18 +48,22 @@ When the reader says "read today", "start reading", "continue", or "next":
 
 Vary the question type to fit the passage and the reader's purpose — comprehension, application, falsification, writing-material, or decision. For when to use each and how to pick, read `references/question-playbook.md`.
 
-### 4. Capture notes
-After the reader answers, append a chunk to the current day's record (base it on `templates/day-record.md`): source location, your question, the reader's answer **verbatim**, a concise reflection, and any transferable material. Then update `reading-progress.md`: current day, completed chunks, next starting point, status. Keep the raw answer intact; add structure below it.
+### 4. Give feedback
+When the reader answers, respond **before** sending the next prompt, following `references/feedback-playbook.md`: mirror one specific thing in their words → check the answer against the text (confirm / fill the gap / correct a misreading with a quoted line) → make one deepening move tied to their purpose or an earlier answer → close or ask at most one follow-up. Calibrate to answer quality (a good answer gets less teaching, a blank one gets a smaller question), and keep it under ~120 words.
 
-### 5. Stage review
+### 5. Capture notes
+After feedback, append a chunk to the current day's record (base it on `templates/day-record.md`): source location, your question, the reader's answer **verbatim**, a concise reflection, and any transferable material. Then update `reading-progress.md`: current day, completed chunks, next starting point, status. Keep the raw answer intact; add structure below it.
+
+### 6. Stage review
 When the reader asks whether a day is done, asks for a summary, or says "that's it for today": check `reading-progress.md` and the day's record, state whether the day is complete/partial/extended, then write `daily-records/Day X stage-summary.md` from `templates/stage-summary.md`. Match the requested length and voice — ~200 words for feeling + meaning, ~400 for two paragraphs (book content, then personal takeaway), 600+ from the reader's perspective built from their prior answers.
 
 ## Bundled resources
 
 - `scripts/init_reading.py` — deterministic folder scaffolder (run it in step 1; don't hand-build the folder).
 - `templates/` — `reading-plan.md`, `reading-progress.md`, `entrance.md`, `day-record.md`, `stage-summary.md`. Copy/fill these instead of inventing structure each time.
-- `references/planning-patterns.md` — read in step 2 when sizing a plan.
+- `references/planning-patterns.md` — read in step 2: the decomposition procedure, chunk rules, and re-planning rules.
 - `references/question-playbook.md` — read in step 3 when choosing the one question.
+- `references/feedback-playbook.md` — read in step 4: the four feedback moves and how to calibrate them.
 
 ## Response style
 Keep interactions light enough to use on a phone. Don't turn every session into research design or therapy unless the reader steers there. If the reader asks a side question mid-reading, answer briefly, record it as an extension note, then return to the book.
