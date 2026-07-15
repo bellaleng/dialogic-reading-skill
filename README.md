@@ -1,5 +1,10 @@
 # Dialogic Reading — a Claude skill
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-d97757.svg)](https://docs.anthropic.com/en/docs/claude-code/skills)
+[![Release](https://img.shields.io/github/v/release/bellaleng/dialogic-reading-skill?color=blue)](https://github.com/bellaleng/dialogic-reading-skill/releases)
+[![GitHub stars](https://img.shields.io/github/stars/bellaleng/dialogic-reading-skill?style=social)](https://github.com/bellaleng/dialogic-reading-skill/stargazers)
+
 Turn any book into a structured, **conversational** reading program.
 
 You read the source text; Claude reads your progress file, sends you one short reading prompt at a time (location + vocabulary + focuses + **one** question), waits for your answer, and keeps the plan, progress, notes, and stage summaries as plain Markdown files you own.
